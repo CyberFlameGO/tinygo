@@ -128,7 +128,7 @@ jobs:
           curl https://wasmtime.dev/install.sh -sSf | bash
           echo "$HOME/.wasmtime/bin" >> $GITHUB_PATH
       - name: Download release artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: linux-amd64-double-zipped
       - name: Extract release tarball
@@ -340,7 +340,7 @@ jobs:
         run: |
           make CROSS=arm-linux-gnueabihf
       - name: Download amd64 release
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: linux-amd64-double-zipped
       - name: Extract amd64 release
@@ -442,7 +442,7 @@ jobs:
         run: |
           make CROSS=aarch64-linux-gnu
       - name: Download amd64 release
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: linux-amd64-double-zipped
       - name: Extract amd64 release
